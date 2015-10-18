@@ -1,0 +1,68 @@
+\textbf{fett}
+\textit{kursiv}
+\underline{unterstrichen}
+\textbf{\underline{\textit{kombination}}}
+\tableofcontents 
+\listoffigures 
+\listoftables 
+\lstlistoflistings 
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.7\linewidth]{./pictures/logo}
+\caption[ich steh im Verzeichnis]{ich steh unter der Grafik}
+\label{fig:logo-sm}
+\end{figure}
+\begin{table}[tbph]
+\centering
+	\begin{tabular}{|*3{>{\centering\arraybackslash}m{0.2\textwidth}|}}
+	\hline
+	\textbf{kopf}&\textbf{kopf}&\textbf{kopf} \\ \hline
+	inhalt & inhalt & inhalt \\ 
+	inhalt & inhalt & inhalt \\ 
+	\hline
+	\end{tabular} 
+	\caption[ich steh im Verzeichnis]{ich steh unter der Tabelle}
+\end{table}
+\usepackage[style=alphabetic-verb,backend=bibtex,natbib=true]{biblatex}
+\bibliography{./pfad/zur/bib/datei}
+ich zitiere hier \cite{braun:scala}
+ich zitiere hier auch \footcite{braun:scala}
+\printbibliography
+\documentclass{article}
+\input{./preamble/settings}
+\begin{document}
+\input{./content/Einleitung}
+\input{./content/Grundlagen-Android}
+\input{./content/Java}
+\end{document}
+\definecolor{sh_comment}{rgb}{0.12, 0.38, 0.18 } %adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
+\definecolor{sh_keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
+\definecolor{sh_string}{rgb}{0.06, 0.10, 0.98} % #101AF9
+\lstset{language=Java,
+	    breaklines=true,
+	    rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2,
+        showspaces=false,
+        showtabs=false
+ }
+ \begin{lstlisting}[language=Java,caption={This is Java.}]
+// Comment
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+ \end{lstlisting}
+ \lstinputlisting[language=Java,linerange=10-15,caption={This is Java, too.}]{./pfad/zu/einer/datei.java}
+// Comment
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}

@@ -1,0 +1,38 @@
+# use glob syntax.
+syntax: glob
+
+# eclipse conf file
+.project
+.texlipse
+tmp/
+
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lol
+*.lot
+*.nlo
+*.nls
+Vortrag.pdf
+*.toc
+*.acn
+*.glg
+*.gls
+*.ist
+*.synctex.gz
+*.out
+*.glo
+*.dvi
+*~
+*.acr
+*.alg
+*.fdb_latexmk
+*.fls
+*blx.bib
+*.run.xml
+*.nav
+*.snm
+*.vrb
+demonstration.pdf

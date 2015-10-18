@@ -1,0 +1,328 @@
+\usepackage{listingsutf8}
+%colors
+\definecolor{sh_comment}{rgb}{0.12, 0.38, 0.18 } %adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
+\definecolor{sh_keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
+\definecolor{sh_string}{rgb}{0.06, 0.10, 0.98} % #101AF9
+
+\lstloadlanguages{Java,sh,bash,Haskell,HTML,PHP,XML}
+
+\lstdefinelanguage{console}{
+  morekeywords={},
+  otherkeywords={warumgehtdasnicht>,\$}
+}
+\newcommand{\lstsetconsole}
+{ \lstset{language=sh,
+        lineskip=-2pt,
+        breaklines=true,
+        %language=console,
+        breaklines=true,
+        float=htpb,
+        rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{blue}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+  }
+}
+\lstdefinelanguage{scalaconsole}{
+  morekeywords={},
+  otherkeywords={scala>,\|}
+}
+\newcommand{\lstsetrepl}
+{ \lstset{%language=sh,
+        lineskip=-2pt,
+        breaklines=true,
+        language=scalaconsole,
+        breaklines=true,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+  }
+}
+
+\newcommand{\lstsetjava}{
+ \lstset{language=Java,
+	    breaklines=true,
+	    rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2,
+        showspaces=false,
+        showtabs=false,
+        literate=
+        %linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,forSome,if,implicit,import,lazy,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={_,:,=,=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+\newcommand{\lstsetscala}{
+ \lstset{language=scala,
+        breaklines=true,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\newcommand{\lstsethtml}{
+
+ \lstset{language=HTML,
+%        alsoletter={<,>,-,!},
+        morekeywords={div,section,header,footer,p,a},
+        breaklines=true,
+        rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+        commentstyle=\textit\color{green},
+        keywordstyle=\bfseries\color{violet},
+        basicstyle=\ttfamily\color{black},
+        stringstyle=\ttfamily\color{blue},
+        emph={id,class,align,type,name,data-role,href},
+        emphstyle=\bfseries\color{orange},
+        showstringspaces=false,
+        frame=single,
+        tabsize=2,
+        linewidth=\textwidth,captionpos=b,
+        numbers=left,stepnumber=1,numbersep=10pt
+ }
+}
+\newcommand{\lstsetphp}{
+ \lstset{language=PHP,
+        breaklines=true,
+        float=htpb,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+
+\newcommand{\lstsettex}{
+ \lstset{language=TeX,
+        breaklines=true,
+        float=htpb,
+        rulesepcolor=\color{black},
+        commentstyle=\tiny\color{sh_comment}\textit,
+        keywordstyle=\tiny\color{sh_keyword}\bfseries,
+        basicstyle=\tiny\ttfamily,
+        stringstyle=\tiny\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2,
+            inputencoding=utf8/latin1,
+        %%linewidth=\textwidth,captionpos=b
+        numbers=left,
+        morekeywords={\usepackage,\documentclass,\title,\author,\date,\today,\begin,\end,\section,\maketitle,\tableofcontents,\subsection,\LaTeX,\textbf,\textit,\listoffigures,\listoftables,\lstlistoflistings,\includegraphics,\caption,\linewidth,\label,\hline, &,\draw,\bibliography,\cite,\footcite,\printbibliography,\node,\path,\foreach,\ifthenelse,\isodd,\textwidth,\small,\definecolor,\ttfamily,\color,\lstset}
+ }
+}
+
+%\lstnewenvironment{code}
+%    {\minipage{\linewidth}
+%    \lstset{}%
+%      \csname lst@SetFirstLabel\endcsname}
+%    {\csname lst@SaveFirstLabel\endcsname
+%    \endminipage}
+    
+    \lstnewenvironment{code}[1][]%
+      {\minipage{\linewidth} 
+       \lstset{
+             rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+             commentstyle=\small\color{sh_comment}\textit,
+             keywordstyle=\small\color{sh_keyword}\bfseries,
+             basicstyle=\small\ttfamily,
+             stringstyle=\small\color{sh_string}\ttfamily,
+             frame=single,#1}} %wenn listingset leer bleibt erscheint die caption nicht im dokument
+      {\endminipage}
+    
+\newcommand{\lstsethaskell}{
+    \lstset{
+      language=Haskell,
+      rulesepcolor=\color{black},
+      commentstyle=\small\color{sh_comment}\textit,
+      keywordstyle=\small\color{sh_keyword}\bfseries,
+      basicstyle=\small\ttfamily,
+      stringstyle=\small\color{sh_string}\ttfamily,
+      showstringspaces=false,
+      frame=single,
+      flexiblecolumns=false,
+      basewidth={0.5em,0.45em},
+      literate={+}{{$+$}}1 {/}{{$/$}}1 {*}{{$*$}}1 {=}{{$=$}}1
+               {==}{{$==$}}2 %{!=}{{$\not\equiv$}}2
+               {>}{{$>$}}1 {<}{{$<$}}1 {\\}{{$\lambda$}}1
+               {\\\\}{{\char`\\\char`\\}}1
+               {->}{{$\rightarrow$} }2 {>=}{{$\geq$}}2 {<-}{{$\leftarrow$}}2
+               {<=}{{$\leq$}}2 {=>}{{$\Rightarrow$} }2
+               {\ .}{{$\circ$}}2 {\ .\ }{{$\circ$}}2 {(.)}{({$\circ$})}2
+               {>>}{{>>}}2 {>>=}{{>>=}}2
+               {|}{{$\mid$}}1
+    }
+}
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch,%
+    function, return, null, catch, switch, var,%
+    if, in, while, do, else, case, break},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{gray}\bfseries,
+  identifierstyle=\color{black},
+  emph={id},
+  emphstyle=\bfseries\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/**}{*/},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\small\color{gray}\ttfamily,
+  stringstyle=\small\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\newcommand{\lstsetjavascript}{
+
+  \lstset{
+     language=JavaScript,
+     %backgroundcolor=\color{lightgray},
+     extendedchars=true,
+     rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+     basicstyle=\footnotesize\ttfamily,
+     showstringspaces=false,
+     showspaces=false,
+     numbers=left,
+     numberstyle=\footnotesize,
+     numbersep=9pt,
+     tabsize=2,
+     breaklines=true,
+     showtabs=false,
+     captionpos=t
+  }
+}
+\newcommand{\lstsetxml}{
+ \lstset{language=XML,
+        breaklines=true,
+		commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2,
+        literate=
+        %linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+
+\lstdefinelanguage{CSharp}{
+ morekeywords = {abstract,event,new,struct,as,explicit,%
+    null,switch,base,extern,object,this,bool,false,%
+    operator,throw,break,finally,out,true,byte,fixed,%
+    override,try,case,float,params,typeof,catch,for,%
+    private,uint,char,foreach,protected,ulong,checked,%
+    goto,public,unchecked,class,if,readonly,unsafe,%
+    const,implicit,ref,ushort,continue,in,return,using,%
+    decimal,int,sbyte,virtual,default,interface,sealed,%
+    volatile,delegate,internal,short,void,do,is,sizeof,%
+    while,double,lock,stackalloc,else,long,static,%
+    enum,namespace,string,partial},
+  morecomment = [l]{//},
+  morecomment = [l]{///},
+  morecomment = [s]{/*}{*/},
+  morestring=[b]",
+  sensitive = true
+}
+\newcommand{\lstsetcsharp}{
+ \lstset{language=csharp,
+        breaklines=true,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\lstdefinelanguage{FSharp}{
+  morekeywords={abstract,and,as,assert,base,begin,%
+    class,default,delegate,do,done,downcast,downto,%
+    elif,else,end,exception,extern,false,finally,for,fun,%
+    function,if,in,inherit,inline,interface,internal,lazy,%
+    let,match,member,module,mutable,namespace,%
+    new,not,null,of,open,or,override,private,public,rec,%
+    return,static,struct,then,to,true,try,type,upcast,use,%
+    val,void,when,while,with,yield,asr,land,lor,lsl,lsr,lxor,%
+    mod,sig,atomic,break,checked,component,const,%
+    constraint,constructor,continue,eager,event,external,%
+    fixed,functor,global,include,method,mixin,object,%
+    parallel,process,protected,pure,sealed,tailcall,trait,virtual,volatile},     
+  sensitive=false,
+  morecomment=[l][\color{greencomments}]{///},
+  morecomment=[l][\color{greencomments}]{//},
+  morecomment=[s][\color{greencomments}]{{(*}{*)}},
+  morestring=[b]"
+}
+\newcommand{\lstsetfsharp}{
+ \lstset{language=fsharp,
+        breaklines=true,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}

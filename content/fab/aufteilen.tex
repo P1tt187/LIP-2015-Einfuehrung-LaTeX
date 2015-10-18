@@ -1,0 +1,40 @@
+\section{Dokument Aufteilen \& Quellcodedarstellung}
+\begin{frame}{Ein Dokument aufteilen}
+\lstsettex
+	\begin{Code}
+	\centering
+	\begin{minipage}{0.7\linewidth}
+	\lstinputlisting[linerange=31-37]{./listings/commands.tex}
+	\end{minipage}
+	
+	\end{Code}
+\end{frame}
+\begin{frame}{Quellcode}
+	 benötigt wird das \textbf{listings} oder das \textbf{listingsutf8} package
+\lstsettex
+	\begin{Code}
+	\centering
+	\begin{minipage}{0.9\linewidth}
+	\lstinputlisting[linerange=38-53,caption={Darstellung festlegen}]{./listings/commands.tex}
+	\end{minipage}	
+	\end{Code}
+\end{frame}
+\begin{frame}{Beispiel}
+\lstsettex
+	\begin{Code}
+	\centering
+	\begin{minipage}{0.9\linewidth}
+	\lstinputlisting[linerange=54-62,caption={Quellcode einbinden}]{./listings/commands.tex}
+	\end{minipage}	
+	\end{Code}
+\end{frame}
+
+\begin{frame}{So sieht's im pdf aus}
+\lstsetjava
+\begin{Code}
+	\centering
+	\begin{minipage}{0.9\linewidth}
+	\lstinputlisting[linerange=63-68,caption={This is Java}]{./listings/commands.tex}
+	\end{minipage}	
+	\end{Code}
+\end{frame}

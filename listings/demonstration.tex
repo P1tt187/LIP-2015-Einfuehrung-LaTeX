@@ -1,0 +1,33 @@
+% ich bin ein kommentar 
+\documentclass{scrartcl} %brief, artikel, report, buch, präsentation
+%hier ist die preambel, hier wird die allgemeine Formatierung festgelegt
+\usepackage[utf8]{inputenc} % zeichenkodierung (wichtig für umlaute)
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel} %deutsche bezeichner für verzeichnisse
+\usepackage{amsmath} %formeln 
+\title{Ein Testdokument}
+\author{Max Mustermann}
+\date{\today}
+\begin{document} %hier geht das dokument los 
+\maketitle %titelseite
+\tableofcontents %inhaltsverzeichnis
+\section{Einleitung}
+ 
+Hier kann ein beliebig langer text stehen.       Überflüssige Leerzeichen werden ignoriert
+,toll , oder?
+ 
+Ich bin ein neuer absatz.
+
+\subsection{Ein Unterpunkt}
+ \LaTeX{} nummeriert automatisch und fügt neue punkte dem Inhaltsverzeichnis hinzu.
+Formeln kann \LaTeX ebenfalls darstellen. Hierzu gibt es einen Mathematik Modus in dem eigene befehle gelten
+Zwei von Einsteins berühmtesten Formeln lauten:
+\begin{align} %hier fängt der mathe modus an
+E &= mc^2                                  \\
+m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{align}
+Aber wer keine Formeln schreibt, braucht sich \\ %erzwungener zeilenumbruch
+damit auch nicht zu beschäftigen.
+Mathe geht auch inline, sieht allerdings etwas anders aus
+ $ m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}} $
+\end{document}
