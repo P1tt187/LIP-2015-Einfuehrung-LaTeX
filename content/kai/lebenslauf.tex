@@ -1,4 +1,60 @@
 \section{Lebenslauf}
 
+\begin{frame}{moderncv}
+  Moderncv beinhaltet eine Dokumentenklasse für moderne Lebensläufe in
+  verschiedenen Darstellungen.\\
+  Diese ist stark abänderbar in Form und Farbe um dem Anwender möglichst viel
+  Spielraum zu lassen.
+\end{frame}
+
 \begin{frame}{Lebenslauf}
+  \lstsettex
+  \begin{Code}
+    \centering
+    \begin{minipage}{0.9\linewidth}
+      \lstinputlisting[firstnumber=1,linerange=1-24,caption={Kopf}]{./listings/lebenslauf.tex}
+    \end{minipage}	
+  \end{Code}
+\end{frame}
+
+\begin{frame}{Lebenslauf}
+  \lstsettex
+  \begin{Code}
+    \centering
+    \begin{minipage}{0.9\linewidth}
+      \lstinputlisting[firstnumber=24,linerange=24-99,caption={Inhalt}]{./listings/lebenslauf.tex}
+    \end{minipage}	
+  \end{Code}
+\end{frame}
+
+\begin{frame}{Lebenslauf}
+  \centering
+Die aktuelle Version von moderncv\footnote{Version 2.2.0}
+\vspace{0.5cm}
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      hat 5 verschiedene Styles:
+      \begin{itemize}
+        \item casual (default),
+        \item classic,
+        \item oldstyle,
+        \item banking, und
+        \item fancy
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      und 8 Farbschemas:
+      \begin{itemize}
+        \item black,
+        \item blue,
+        \item burgundy,
+        \item green,
+        \item grey,
+        \item orange,
+        \item purple, und
+        \item red.
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}

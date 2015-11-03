@@ -1,0 +1,35 @@
+\documentclass[version=last,fontsize=11pt,DIV=11,BCOR=10mm]{scrlttr2}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{lipsum}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\setkomavar{subject}{Grund des Briefes}
+\setkomavar{date}{den \today}
+\setkomavar{place}{Schmalkalden}
+\setkomavar{backaddress}{Foo Bar, Hauptstraße 13, 55555 Tardis}
+\setkomavar{signature}{Foo Bar}
+
+\begin{letter}{
+Firma Geldgeil\\
+Peter Personalleiter\\
+Hauptstraße 14\\
+55556 Mordor}
+
+\opening{Sehr geehrter Herr Geldgeil,}
+
+\selectlanguage{ngerman}
+\lipsum
+\selectlanguage{ngerman}
+
+\closing{Mit freundlichen Grüßen,}
+
+\setkomavar*{enclseparator}{Anlage}
+%\encl{Lebenslauf}
+\end{letter}
+\end{document}
